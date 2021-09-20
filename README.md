@@ -7,11 +7,12 @@
 post your work on github
 
 ### Description
-this project is about puttin what we have learned about version control and github into practice.
+this project is about putting what we have learned about version control and github into practice.
 
 ### Files used
 .gitignore.txt
 readme.md
+bikeshare.py
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
