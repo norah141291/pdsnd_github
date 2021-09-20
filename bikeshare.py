@@ -18,21 +18,22 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input("please enter required city name: chicago, new York City or washington!").lower()
+        city = input("PLEASE ENTER DESIRED CITY NAME: chicago, new York City or washington!").lower()
         if city not in CITY_DATA:
-            print('you entered invalid city name')
-            continue   
+            print('invalid input ')
+            continue
         else:
             break
+
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        month=input('Please Enter Required Month From January Until June ,Or Write"All"To Display Data For All Months').title()
+        month=input('Please put Required Month From January Until June ,Or choose "All"To Display Data For All Months').title()
         months =['January' , 'Feburary' ,'March' ,'April' ,'May' ,'June' ]
         if month not in months and month!='all':
             print ('please enter correct month')
         else:
             break
-     # TO DO: get user input for weekdays              
+     # TO DO: get user input for weekdays
     while True:
         day=input('please enter required day of week or write"all"to display data for all weekdays').lower()
         days=['sunday','monday','tuesday','wedensday','thursday','friday']
@@ -95,7 +96,7 @@ def time_stats(df):
         print('\nThis took %s seconds'%(time.time()-start_time))
 
         print('-'*40)
-    
+
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -177,7 +178,7 @@ def main():
         df=load_data(city, month, day)
 
         time_stats(df)
-       
+
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
@@ -190,12 +191,11 @@ def main():
                 counter += 5
             elif entry=="no":
                 break
-                
-                
+
+
         restart=input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-            
+
 if __name__== "__main__":
      main()
-
